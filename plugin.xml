@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin id="cordova-ios-bluetooth-description" version="1.2.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<name>iOS Permissions</name>
+<author>Jake Bown (jakebown.com)</author>
+<description>Cordova / PhoneGap Plugin Permission Settings for NSBluetoothPeripheralUsageDescription in iOS 11 by adding a declaration to the Info.plist file</description>
+<keywords>cordova, ios, app, security, permissions, nsbluetoothperipheralusagedescription</keywords>
+<license>MIT</license>
+<engines>
+    <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <platform name="ios">
+        <preference name="NS_BLUETOOTH_PERIPHERAL_DESCRIPTION" default="Access to Bluetooth enables this app to use Beacon technology"/>
+        <config-file target="*-Info.plist" parent="NSBluetoothPeripheralUsageDescription">
+            <string>$NS_BLUETOOTH_PERIPHERAL_DESCRIPTION</string>
+        </config-file>
+    </platform>
+</plugin>
